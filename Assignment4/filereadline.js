@@ -27,7 +27,7 @@ rl.on('pause', function(line) {
             var csvContent =  filterCSVContent(line, csvHeader);
             dataArray.push(csvContent);
         }
-        console.log(csvContent);
+        //console.log(csvContent);
           this.emit("resume");
     }
     
