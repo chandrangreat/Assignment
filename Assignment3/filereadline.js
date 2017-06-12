@@ -27,7 +27,7 @@ LineObject.prototype.filterCSVHeader=function(){
     return csvheader;
 }
 
-LineObject.prototype.displayContent=function(){
+LineObject.prototype.getContent=function(){
   
     var that = this;
     this.lineArray = this.processLine();
@@ -71,12 +71,7 @@ rl.on('pause', function(line) {
                 this.emit("resume");
             }
             else{
-               // if(line){
-                   // console.log(this.csvheader);
-                    //var csvContent =  filterCSVContent(line, csvHeader);
-                        csvContent.push(lineObject.displayContent());
-                //}
-                //console.log(csvContent);
+                csvContent.push(lineObject.getContent());
                 this.emit("resume");
             }
 
